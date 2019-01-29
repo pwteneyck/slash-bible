@@ -39,3 +39,8 @@ the above text.
 The `build.sh` script will package things up into a ZIP file that
 you can upload to AWS Lambda. It needs to be aware of dependencies,
 so if you add any in code you'll need to update `build.sh` as well.
+
+To deploy to Lambda, upload the ZIP file and make sure you have:
+
+  * Language: Python 3.7
+  * Handler: src/main.lambda_handler

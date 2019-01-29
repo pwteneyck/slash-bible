@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
 rm function.zip
-mkdir package
-cd package
+mkdir build
+cd build
 pip3 install boto3 --target .
 zip -r9 ../function.zip .
 cd ..
-zip -g function.zip main.py
-rm -rf package
+zip -g function.zip src/main.py
+rm -rf build
